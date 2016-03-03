@@ -1,9 +1,9 @@
 source 'https://rubygems.org'
 ruby '2.3.0'
 
-gem 'rails', '4.2.5.1'
+gem 'rails', '5.0.0.beta3'
+# gem 'rails', '4.2.5.1'
 gem 'pg'
-gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'underscore-rails'
@@ -13,10 +13,9 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'select2-rails'
 
-gem 'devise'
+gem 'devise', '~> 4.0.0.rc1'
 gem 'omniauth'
 gem 'omniauth-google-oauth2'
-gem 'audited-activerecord', '~> 4.0'
 
 gem 'figaro'
 
@@ -63,7 +62,7 @@ end
 
 group :development, :test do
   gem 'byebug'
-  gem 'rspec-rails', '~> 3.0'
+  gem 'rspec', '>= 3.5.0.beta1'
   gem 'factory_girl_rails', '~> 4.0'
   gem 'faker'
   gem 'shoulda-matchers'

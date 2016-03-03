@@ -15,8 +15,6 @@ class Event < ActiveRecord::Base
   before_update :update_amount
   validate :ensure_not_frozen, :ensure_less_than_a_day
 
-  audited associated_with: :project
-
   include Aggregate
 
   scope :gefroren, -> { where gefroren: true }

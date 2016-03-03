@@ -5,8 +5,6 @@ class Project < ActiveRecord::Base
   validates_presence_of :name
   validates_uniqueness_of :name
 
-  has_associated_audits
-
   has_many :user_projects, dependent: :destroy
   has_many :events, dependent: :nullify
   has_many :users, through: :user_projects

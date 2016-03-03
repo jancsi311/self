@@ -16,8 +16,6 @@ class User < ActiveRecord::Base
   validates_numericality_of :vacation_limit, greater_than_or_equal_to: 0
   before_save :set_admin_flag
 
-  has_associated_audits
-
   def name
     "#{first_name.capitalize} #{last_name.capitalize}"
   end
