@@ -18,6 +18,10 @@ Rails.application.routes.draw do
 
   resources :feedbacks, only: [:create]
 
+  resources :rooms, only: [:show]
+
+  mount ActionCable.server => '/cable'
+
   namespace :admin do
     get '/' => 'dashboard#index', as: :dashboard
 

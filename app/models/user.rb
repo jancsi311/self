@@ -4,6 +4,7 @@ class User < ActiveRecord::Base
   has_many :events, dependent: :destroy
   has_many :evaluated_vacation_requests, class_name: 'VacationRequest', foreign_key: :admin_id
   has_many :feedbacks
+  has_many :messages
 
   include Oauth
   include Payable

@@ -1,0 +1,5 @@
+<div class=“message”>
+  <p class="message_time"><%= message.created_at.strftime("[%H:%M:%S]")  %></p>
+  <p class="message_user red-text"><%= message.user.first_name %> <%= message.user.last_name %>:</p>
+  <p class="message_content"><%= message.content %></p>
+</div>

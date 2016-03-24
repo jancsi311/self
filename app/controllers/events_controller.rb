@@ -7,6 +7,7 @@ class EventsController < ApplicationController
   before_filter :load_event, only: [:update, :destroy, :edit]
 
   def index
+    cookies.signed[:user_id] = current_user.id
     respond_to do |format|
       format.json do
 
